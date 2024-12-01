@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/About.css'; // Import your custom styles
+import '../styles/about.css'; // Import your custom styles
 import background from '../assets/background_nokey.png';
 
 
