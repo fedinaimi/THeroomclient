@@ -62,14 +62,13 @@ const HomePage: React.FC = () => {
       {isMobile ? (
         // Mobile Version
         <MobileView chapters={chapters} />
+        
       ) : (
         // Desktop Version
         <DesktopView chapters={chapters} />
       )}
-      <About />
-      <TeamBuilding />
-      <Reservation />
-      <Contact />
+     
+   
     </div>
   );
 };
@@ -123,7 +122,13 @@ const MobileView: React.FC<{ chapters: Chapter[] }> = ({ chapters }) => (
           description="Dans des décors authentiques, inspirés de vos films préférés, vous devrez résoudre des énigmes, manipuler des objets et découvrir des passages secrets pour réussir votre mission."
         />
       </div>
+      
     </div>
+    <About />
+      <TeamBuilding />
+      <Reservation />
+      <Contact />
+  
   </>
 );
 
@@ -158,7 +163,12 @@ const DesktopView: React.FC<{ chapters: Chapter[] }> = ({ chapters }) => (
         ))}
       </div>
     </div>
+    <About />
+      <TeamBuilding />
+      <Reservation />
+      <Contact />
   </div>
+  
 );
 
 const InfoBlock: React.FC<{ icon: string; title: string; description: string }> = ({ icon, title, description }) => (
