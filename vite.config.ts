@@ -1,13 +1,15 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-    server: {
-        proxy: {
-            '/api': {
-                target: 'https://theroomback.onrender.com',
-                changeOrigin: true, // Needed for CORS
-                secure: true, // Set this to false if your backend uses self-signed certificates
-            },
-        },
+  plugins: [react()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://theroomback.onrender.com',
+        changeOrigin: true,
+        secure: true,
+      },
     },
+  },
 });
