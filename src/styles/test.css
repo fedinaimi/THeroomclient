@@ -1,0 +1,221 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Dark background like TikTok */
+    color: white;
+}
+
+/* Main app container */
+.app-container {
+    overflow-y: scroll; /* Allow vertical scrolling */
+    scroll-snap-type: y mandatory; /* Enable snap scrolling */
+    height: 100vh; /* Ensure it takes full height */
+}
+.main-container_t {
+    font-family: 'Bunya Personal', sans-serif;
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    background-color: #000;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+.main-title_t {
+    font-size: 4rem;
+    color: white;
+}
+.logoEscape_t{
+    position: absolute;  /* Position it relative to the main container */
+    top: 7rem;           /* Adjust the top position */
+    left: 50%;           /* Move it to the center horizontally */
+    transform: translateX(-50%); /* Adjust it by 50% of its width to perfectly center */
+    height: auto;
+    width: auto;         /* Make sure the width is appropriate for the logo */
+    max-width: 80%;
+    z-index: 10;   
+}
+
+.scenario-container_t{
+    font-size: 1rem;
+    position: absolute;  /* Position it relative to the main container */
+    bottom: 7rem;           /* Adjust the top position */
+    left: 50%;           /* Move it to the center horizontally */
+    transform: translateX(-50%);
+    width: 80%;
+    animation: hover-up-down 1.5s ease-in-out infinite; 
+}
+@keyframes hover-up-down {
+    0% {
+        transform: translateX(-50%) translateY(0);  /* Start at original position */
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);  /* Move up by 10px */
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);  /* Return to original position */
+    }
+}
+/* Fullscreen container for each video section and the main container */
+.main-container_t, .fullscreen-section {
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    scroll-snap-align: start; /* Snap to start for vertical scrolling */
+}
+
+/* Video styling */
+.content-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Video overlay container for title, description, and other elements */
+.video-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.video-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.video-description {
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 0 10px;
+}
+
+.cta-btn {
+    background-color: #F26422;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #e2501f;
+}
+
+/* Floating action buttons (like/comment/share) */
+.floating-controls {
+    position: absolute;
+    right: 20px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.floating-controls button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.floating-controls button:hover {
+    transform: scale(1.2);
+}
+
+/* Bottom navigation bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.bottom-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.2s ease-in-out;
+}
+
+.bottom-nav ul li a:hover {
+    color: #F26422;
+}
+.main-container_t h2{
+    font-size: 2rem;
+}
+.info-block_t {
+    flex: 1;
+    max-width: 70vw; /* Limiter la largeur des blocs */
+    padding: 1.5rem; /* Ajouter un fond pour les blocs */
+    border-radius: 10px;
+    text-align: center; /* Centrer le contenu du bloc */
+}
+
+.info-block_t h3 {
+    margin-top: 0;
+    font-size: 1.75rem; 
+}
+
+.info-block_t p {
+    font-size: 1rem; /* Ajuster la taille du texte du paragraphe */
+}
+
+.info-block_t img {
+    width: 3rem; 
+}
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}   
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,541 @@
+/* General Reservation Container Styling */
+.reservation-container {
+    padding-top: 7rem;
+    font-family: 'Bunya Personal', sans-serif;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Headings Styles */
+.reservation-container h1 {
+    box-shadow: 0 0 1px rgba(242, 100, 34, 0.7), 0 0 24px rgba(242, 60, 0, 0.5);
+    padding: 0.5em;
+    border-radius: 35px;
+    border-right: #f26422 2px solid;
+    border-top: #f26422 2px solid;
+    text-shadow: 1px 1px 5px white, 0 0 1em #f26422, 0 0 0.2em rgb(1, 1, 1);
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+.react-calendar__viewContainer{
+    display: none !important;
+}
+.reservation-container h2 {
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+
+/* Options Section */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.option {
+    border-radius: 35px;
+    border-bottom: #f26422 2px solid;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+}
+
+.option h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.option p {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Calendar Styles */
+.calendar {
+    border-radius: 8px;
+    padding: 1rem;
+    color: white !important;
+    margin: auto;
+    margin-top: 0;
+}
+.calendar-navigation {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem ;
+    font-family: 'Bunya Personal', sans-serif ;
+    background-color: rgba(37, 37, 37, 0.8) ;
+    border: #f26422 1px solid ;
+    border-radius: 45px ;
+    padding: 20px;
+    width: 40% ;/* Space between buttons and date display */
+    align-items: center; /* Center items vertically */
+    margin: 1rem;
+}
+.time-slot.unavailable {
+    background-color: #ccc; /* Grey background for unavailable slots */
+    color: #666; /* Darker text color for better visibility */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+}
+.time-slot.unavailable:hover {
+    background-color: #ccc; /* Grey background for unavailable slots */
+    color: #666; /* Darker text color for better visibility */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+}
+.calendar-navigation button {
+    border: #f26422 1px solid;
+    box-shadow: 0 0 12px rgba(242, 100, 34, 0.7), 0 0 24px rgba(255, 0, 50, 0.5);
+    background-color: #f26422; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 25px; /* Rounded corners */
+    padding: 0.5rem 1.5rem; /* Padding for the buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+
+.calendar-navigation button:hover {
+    background-color: black;
+    color: #f26422;
+    transition: background-color 0.5s; /* Darker color on hover */
+}
+
+.active-date {
+    flex-grow: 1; /* Allow the active date display to take up remaining space */
+    text-align: center; /* Center the text */
+    font-size: 2rem; /* Increase font size */
+}
+
+.react-calendar {
+    font-size: 1.5rem !important;
+    font-family: 'Bunya Personal', sans-serif !important;
+    background-color: rgba(37, 37, 37, 0.8) !important;
+    border: #f26422 1px solid !important;
+    border-radius: 25px !important;
+    padding: 20px;
+    width: 60% !important;
+    margin: 5REM auto;
+}
+.react-calendar__navigation {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 1rem !important;
+    height: 4rem !important;
+    margin-bottom: 0 !important;
+}
+.react-calendar__navigation__label__labelText {
+    font-family: 'Bunya Personal', sans-serif !important;
+    font-size: 2rem !important;
+}
+.react-calendar__navigation__arrow {
+    font-size: 2rem !important;
+}
+.react-calendar__tile {
+    padding: 15px !important;
+    background: none !important;
+    color: white !important;
+    border-radius: 10px !important;
+    transition: background-color 0.3s ease-in-out !important;
+}
+
+.react-calendar__tile:enabled:hover {
+    background-color: #f26422 !important;
+    color: white !important;
+}
+
+.react-calendar__tile--active {
+    background-color: #f26422 !important;
+    color: #ffff !important;
+}
+
+.react-calendar__month-view__weekdays {
+    font-family: 'Bunya Personal', sans-serif !important;
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+.hide {
+    visibility: hidden !important;
+}
+
+.past-date {
+    color: red !important;
+}
+
+.current-date {
+    background-color: green !important;
+    color: white !important;
+}
+
+.special-popup {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: #f26422 1px solid;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Form Styling */
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 400px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 0.4rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 1px solid #f26422;
+    background-color: #222;
+    color: white;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+option:disabled {
+    color: grey;
+}
+
+.submit-btn {
+    padding: 1rem;
+    background-color: #f26422;
+    color: white;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-shadow: 0 0 12px rgba(242, 100, 34, 0.7), 0 0 24px rgba(242, 60, 0, 0.5);
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.submit-btn:hover {
+    background-color: #000;
+    border: #f26422 1px solid;
+    border-radius: 45px;
+}
+
+/* Availability Section */
+.availability-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if needed */
+    gap: 8px; /* Space between the time slots */
+    justify-content: space-around;
+}
+
+.card_r {
+    display: flex;
+    flex-direction: column;
+    background-color: #222 ;
+    color: white;
+    border: 1px solid #f26422;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    max-width: 220px;
+    margin: 0.5rem;
+}
+
+.card_r .h2 {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+}
+.room-image {
+    width: 100%; 
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */ /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: round the corners */
+    margin-bottom: 10px; /* Space between the image and the room name */
+}
+
+.times {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.time-slot {
+    flex: 1 1 auto;/* Limits width to make time slots narrower */
+    padding: 8px;
+    background-color: #222; /* Adjust background color as needed */
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid #f26422;
+}
+
+.time-slot:hover {
+    background-color: #f26422;
+    color: white;
+}
+
+.card_rs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+
+.time-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1000px) {
+    .reservation-container h1 {
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .reservation-container h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .options {
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .option {
+        border-radius: 35px;
+        padding: 1rem;
+        margin: 0.5rem 1rem;
+    }
+
+    .option h2 {
+        font-size: 1.5rem;
+    }
+
+    .option p {
+        font-size: 1.5rem;
+    }
+
+    .calendar {
+        margin-top: 1rem;
+    }
+
+    .react-calendar {
+        width: 90vw !important;
+        height: auto !important;
+    }
+
+    .card_r {
+        padding: 1rem;
+        max-width: 20%;
+        display: flex;
+    }
+
+    .card_rs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .availability-section {/* Stacks items vertically on small screens */
+        align-items: stretch; 
+        gap: 0;
+    }
+    .time-slot{
+        max-width: 100%;
+    }
+    .calendar-navigation{
+        width: 80%;
+    }
+    .calendar-navigation .active-date{
+        font-size: 1rem;
+    }
+    .room-image {
+        width: 110%; 
+        aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */ /* Maintain aspect ratio */
+        border-radius: 8px; /* Optional: round the corners */
+        margin-bottom: 10px; /* Space between the image and the room name */
+    }
+}
+
+/* Input Styles */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #f26422;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to overlay everything */
+}
+
+.modal-content {
+    box-shadow: 0 0 40px rgba(242, 100, 34, 0.7), 0 0 24px rgba(242, 60, 0, 0.5);
+    background-color: #222;
+    padding: 20px;
+    border-radius: 35px;
+    width: 80%;
+    max-width: 500px;
+    border: #f26422 1PX solid;
+}
+
+
+
+form {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #f26422;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+button {
+    box-shadow: 0 0 4px rgba(242, 100, 34, 0.7), 0 0 24px rgba(242, 60, 0, 0.5);
+    padding: 10px;
+    background-color: #f26422;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button[type="button"] {
+    box-shadow: 0 0 1px rgba(255, 0, 0, 0.7), 0 0 24px rgba(255, 0, 0, 0.5);
+    background-color: rgb(255, 0, 0); /* Grey background for the Close button */
+}
+
+button:hover {
+    opacity: 0.9;
+}
+.selected-room-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.selected-room-image {
+    width: 50%;
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */ /* Maintain aspect ratio */
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 35px;
+}
+
+.people-select {
+    text-align: center;
+    width: 20%;
+    margin-top: 5px; /* Space above the select */
+    padding: 10px; /* Padding inside the select */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #f26422; /* Border color */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"><polygon points="0,0 5,5 10,0" fill="%23f26422"/></svg>'); /* Custom arrow icon */
+    background-repeat: no-repeat; /* No repeat for the icon */
+    background-position: right 10px center; /* Position the icon */
+    background-size: 10px; /* Size of the icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.people-select:focus {
+    border-color: #d1551e; /* Darker border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.people-select option {
+    padding: 10px; /* Padding for options */
+}
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px; /* Space above payment methods */
+}
+.payment-methods-options {
+    display: flex;
+    gap: 4rem;
+    flex-direction: row;
+    margin-top: 10px; /* Space above payment methods */
+}
+.payment-methods label {
+    margin-bottom: 5px; /* Space between radio buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+input[type="radio"] {
+    margin-right: 5px; /* Space between radio button and label text */
+}
+
+.time-slot.unavailable {
+    color: gray; /* Change color to indicate unavailability */
+    text-decoration: line-through; /* Optional: strike through to show it's unavailable */
+    opacity: 0.5; /* Optional: make it look disabled */
+}

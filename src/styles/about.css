@@ -1,0 +1,63 @@
+.about-container {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5rem;
+    font-family: 'Bunya Personal', sans-serif;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+    height: 100vh;
+    background-color: #000;
+}
+
+/* Description section */
+.about-description {
+    flex: 1;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Google Maps section */
+.google-maps {
+    flex: 1;
+}
+
+.google-maps iframe {
+    width: 100%;
+    height: 300px; /* Adjust this height if necessary */
+    border: none;
+    border-radius: 25px;
+}
+
+/* Responsive adjustments for screens smaller than 1000px */
+@media (max-width: 1000px) {
+    .about-container {
+        margin: 0;
+        width: 100%;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center align text */
+        padding: 0rem; /* Reduce padding */
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .about-description {
+        padding-top: 5rem;
+        margin: 1.5rem;
+        font-size: 1.2rem; /* Scale down font size */
+        line-height: 1.4;
+        margin-bottom: 2rem; /* Add space between sections */
+    }
+
+    .google-maps iframe {
+        margin: 1rem;
+        width:80%;
+        margin-bottom: 7rem;
+        height: 250px; /* Adjust iframe height for smaller screens */
+    }
+}

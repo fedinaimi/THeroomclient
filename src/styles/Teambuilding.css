@@ -1,0 +1,75 @@
+/* Main container for the team building section */
+.team-container {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5rem;
+    font-family: 'Bunya Personal', sans-serif;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    margin: 0 auto;
+    display: flex; /* Use flexbox to arrange items side by side */
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    gap: 20px; /* Space between items */
+    width: 90%;
+    min-height: 100vh; /* Ensure a minimum height for the section */
+    background-color: #000;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Section for text content */
+.team-description {
+    flex: 1;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Make it the same height as the Instagram embed */
+    min-height: 300px; /* Ensure visibility on mobile */
+}
+
+/* Instagram embed section */
+.team-embed {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Set background color to black */
+    padding: 20px;
+    height: 100%; /* Make it the same height as the description */
+    min-height: 300px; /* Ensure visibility on mobile */
+}
+
+/* Ensures Instagram embed block displays properly */
+.team-embed blockquote {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    background-color: #000 !important; /* Set the Instagram embed background to black */
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1000px) {
+    .team-container {
+        padding: 0;
+        padding-top: 5rem;
+        margin: 0;
+        width: 100%;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+
+    .team-embed,
+    .team-description {
+        display: flex;
+        margin: 1rem;
+        height: auto; /* Adjust height for stacked layout */
+        min-height: 300px; /* Ensure visibility on smaller screens */
+    }
+}

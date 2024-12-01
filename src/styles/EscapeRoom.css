@@ -1,0 +1,344 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Dark background like TikTok */
+    color: white;
+}
+
+/* Main app container */
+.app-container {
+    overflow-y: scroll; /* Allow vertical scrolling */
+    scroll-snap-type: y mandatory; /* Enable snap scrolling */
+    height: 100vh; /* Ensure it takes full height */
+}
+a {
+    color: inherit; /* Inherit the color from the parent element */
+    text-decoration: none; /* Remove the underline */
+}
+/* Universal container for both desktop and mobile */
+.main-container, .main-container_t {
+    font-family: 'Bunya Personal', sans-serif;
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: #000;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.main-title, .main-title_t {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 14rem;
+}
+.main-title{
+    margin-bottom: 20rem;
+    text-align: center;
+    display: block;
+}
+.logoEscape, .logoEscape_t {
+    top: 7rem;
+    height: auto;
+    width: 30%; /* Desktop: 30%, Mobile: Handled in media query */
+    z-index: 10;
+}
+.logoEscape{
+    position: relative;
+    margin: 0 auto;      /* Center using margin */
+    height: auto;
+    width: 50%;          /* Adjust width for desktop */
+    z-index: 10;
+    display: block; 
+}
+.logoEscape_t {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+}
+.fullscreen-section {
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    scroll-snap-align: start; /* Snap to start for vertical scrolling */
+}
+
+.content-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Scenario Cards - Desktop */
+.scenario-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.scenario-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4vw;
+    width: 100%;
+    max-width: 100%;
+}
+
+.card {
+    background-color: black;
+    background: linear-gradient(to right bottom, rgb(232, 42, 32), rgba(0, 0, 0, 0.5), rgba(0, 0,0, 1)); /* Shorthand overrides size */
+    background-size: 300% 100%; /* Ensure this comes after the shorthand */
+    animation: gradientMove2 5s linear infinite;
+    box-shadow: 0 0 12px rgba(232, 46, 34, 0.7), 0 0 24px rgba(255, 0, 50, 0.5);
+    border: #F26422 1px solid;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 20rem; /* Adjust for desired width */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card img {
+    width: 100%; /* Responsive full width */
+    height: 10rem;
+    border: #F26422 1px solid;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.card p {
+    margin-top: 0.5rem;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%;
+    animation: gradientMove 2s linear infinite;
+    white-space: nowrap;  /* Ensure the gradient fully works across the text */
+    overflow: hidden;     /* Hide overflow */
+    display: inline-block; /* Ensure it behaves properly as a block element */
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+@keyframes gradientMove2 {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+/* Info Section for Both Desktop and Mobile */
+.escape-info, .escape-info_t {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem;
+    flex-wrap: wrap;
+}
+
+.info-block, .info-block_t {
+    flex: 1;
+    max-width: 300px;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.info-block img, .info-block_t img {
+    width: 70px; /* Icon size */
+}
+
+.info-block h3, .info-block_t h3 {
+    margin-top: 0;
+    font-size: 1.75rem;
+}
+
+.info-block p, .info-block_t p {
+    font-size: 1rem; /* Paragraph text size */
+}
+
+/* Video overlay container (Mobile) */
+.fullscreen-section .video-overlay {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.video-overlay .video-title {
+    font-family: 'Bunya Personal', sans-serif;
+    font-size: 1.9rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.video-overlay .video-description {
+    font-family: 'Bunya Personal', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 0 10px;
+}
+
+.video-overlay .cta-btn {
+    box-shadow: 0 0 12px rgba(242, 100, 34, 0.7), 0 0 24px rgba(255, 0, 50, 0.5);
+    background-color: #F26422;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #e2501f;
+}
+
+/* Bottom navigation bar (Mobile) */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.bottom-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.2s ease-in-out;
+}
+
+.bottom-nav ul li a:hover {
+    color: #F26422;
+}
+
+/* Floating action buttons (like/comment/share) */
+.floating-controls {
+    position: absolute;
+    right: 20px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.floating-controls button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.floating-controls button:hover {
+    transform: scale(1.2);
+}
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 1000px) {
+    .logoEscape {
+        width: 80%; /* Adjust logo size for mobile */
+    }
+
+    .scenario-container_t {
+        font-size: 1rem;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        animation: hover-up-down 1.5s ease-in-out infinite;
+    }
+
+    @keyframes hover-up-down {
+        0% {
+            transform: translateX(-50%) translateY(0);
+        }
+        50% {
+            transform: translateX(-50%) translateY(-10px);
+        }
+        100% {
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+
+    .info-block_t {
+        max-width: 70vw; /* Adjust width for mobile */
+    }
+
+    .react-calendar {
+        width: 90vw !important; /* Adjust for responsiveness */
+    }
+}

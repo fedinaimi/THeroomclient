@@ -1,0 +1,102 @@
+/* Main container for the contact section */
+.contact-container {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5rem;
+    font-family: 'Bunya Personal', sans-serif;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    height: 70vh;
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* Description section */
+.contact-description {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-description h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #e6e6e6;
+}
+
+.contact-description p {
+    margin-right: 3rem;
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Social links container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Stack links vertically */
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Individual social link styles */
+.social-links a {
+    text-decoration: none;
+    color: #e6e6e6;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6f61;
+}
+
+/* Icons styles */
+.social-icon {
+    font-size: 2rem;
+}
+
+/* Responsive adjustments for screens smaller than 1000px */
+@media (max-width: 1000px) {
+    .contact-container {
+        margin: 0;
+        padding: 0 !important;
+        width: 100%;
+        height: 100vh;
+        padding: 3rem; /* Reduce padding for smaller screens */
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+    .contact-description {
+        padding: 1.5rem;
+    }
+    .contact-description h1 {
+        font-size: 2.5rem; /* Reduce heading size */
+    }
+
+    .contact-description p {
+        font-size: 1.4rem; /* Reduce paragraph font size */
+        line-height: 1.5;
+    }
+
+    .social-links {
+        gap: 1rem; /* Adjust gap between links */
+    }
+}
+
+
+    
