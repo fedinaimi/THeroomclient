@@ -48,7 +48,7 @@ const ScenarioEscape: React.FC = () => {
     };
 
     // Get the number of stars based on the chapter's difficulty
-    const starCount = difficultyStars[chapterData.difficulty] || 0;
+    const starCount = difficultyStars[chapterData.difficulty as keyof typeof difficultyStars] || 0;
 
     // Function to handle the reservation button click
     const handleReservationClick = () => {
