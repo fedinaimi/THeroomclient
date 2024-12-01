@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../styles/TeamBuilding.css';
+import '../styles/Teambuilding.css';
 import background from '../assets/background_nokey.png';
 
 const TeamBuilding: React.FC = () => {

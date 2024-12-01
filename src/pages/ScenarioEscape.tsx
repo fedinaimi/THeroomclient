@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import background from '../assets/background_nokey.png';
-import '../styles/cannibal.css';
+import '../styles/Cannibal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faStar } from '@fortawesome/free-solid-svg-icons';
 
