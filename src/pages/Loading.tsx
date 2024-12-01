@@ -1,6 +1,6 @@
 // src/pages/Loading.tsx
 import React, { useEffect, useState } from 'react';
-import '../styles/loading.css'; // Import your styles
+import '../styles/Loading.css'; // Import your styles
 import videoSrc from '../assets/waiting_2.mp4'; // Import your video
 
 const Loading: React.FC<{ onComplete: () => void; }> = ({ onComplete }) => {
